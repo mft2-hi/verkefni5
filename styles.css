@@ -206,17 +206,27 @@ img {
 @media (min-width: 500px) {
   .boxes {
     grid-template-columns: repeat(1, 1fr);
+grid-column-end: span 1;
+  }
+  .boxes .box img {
+    max-height: 400px;
   }
 }
 @media (min-width: 1000px) {
   .boxes {
     grid-template-columns: repeat(2, 1fr);
   }
+  .boxes .box img {
+    max-height: 400px;
+  }
 }
 
 @media (min-width: 1500px) {
   .boxes {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .boxes .box img {
+    max-height: 300px;
   }
 }
 .boxes .box {
@@ -243,14 +253,12 @@ img {
 }
 
 .boxes .box img {
-  max-height: 400px;
-
   object-fit: cover;
   object-position: top center;
 }
 
 .boxes .box .link {
-  margin-top: calc(var(--spacing) * 0.5);
+  margin-top: auto;
 
   font-weight: bold;
 }
@@ -321,10 +329,9 @@ form button {
   padding: 1rem;
   border-radius: 12px;
   border: 1px solid #2f0505;
-text-align: center;
-text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 }
-
 
 .link:hover {
   background-color: var(--color-gold-light);
